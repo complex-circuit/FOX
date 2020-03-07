@@ -6,6 +6,8 @@ The outer case a waterproof ammocase.
 
 Responds to DTMF odd numbers, but the recommended is 1.
 
+Central Computer: Arduino Nano
+
 Wiring
 ------
 TX microphone input : digital pin 8 on Arduino
