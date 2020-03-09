@@ -20,7 +20,7 @@ DTMF decoder ...continued : StQ(not to be confused with StQ active low) goes wit
 
 DTMF decoder ...continued : Q1 goes with pin 5 on Arduino, The headphone jack goes to the headphone/earpone connector on radio
 
-PTT control : Future Enhancement
+PTT control : Pin 10 on Arduino
 
 Warnings
 --------
