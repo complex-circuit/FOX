@@ -3,13 +3,14 @@
 #define c 395
 void beep(int timeofbeep){
 tone(8,500);delay(timeofbeep);
-noTone(8);
+tone(8,32766);
 delay(50);}
 void dah(){beep(150);}
 void dit(){beep(50);}
 void space(){delay(150);}
-void setup(){int x=0;pinMode(8,OUTPUT);pinMode(4,INPUT);pinMode(5,INPUT);
-while(x!=10){tone(8,a);delay(1000);tone(8,b);delay(1000);tone(8,c);delay(1000);noTone(8);x++;}
+void setup(){pinMode(10,OUTPUT);digitalWrite(10,LOW);pinMode(8,OUTPUT);pinMode(4,INPUT);pinMode(5,INPUT);}
+void transmit(){digitalWrite(10,HIGH);int x=0;
+while(x!=10){tone(8,a);delay(1000);tone(8,b);delay(1000);tone(8,c);delay(1000);tone(8,32766);x++;}
 x=0;
 space();
 dit();dit();dah();dit();space();//          F
@@ -27,6 +28,6 @@ dit();dit();dit();dah();dah();space();//    3
 dit();dah();dah();dah();space();//          J
 dah();dit();dit();dit();space();//          B
 dah();dit();dah();dah();//                  Y
-
-}
-void loop(){if(digitalRead(4)&&digitalRead(5)){setup();}}
+noTone(8);delay(1000);
+digitalWrite(10,LOW);}
+void loop(){if(digitalRead(4)&&digitalRead(5)){transmit();}}
