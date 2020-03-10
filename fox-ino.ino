@@ -8,7 +8,7 @@ delay(50);}
 void dah(){beep(150);}
 void dit(){beep(50);}
 void space(){delay(150);}
-void setup(){pinMode(10,OUTPUT);digitalWrite(10,LOW);pinMode(8,OUTPUT);pinMode(4,INPUT);pinMode(5,INPUT);}
+void setup(){pinMode(10,OUTPUT);digitalWrite(10,LOW);pinMode(8,OUTPUT);pinMode(4,INPUT);pinMode(5,INPUT);pinMode(6,INPUT);pinMode(7,INPUT);pinMode(9,INPUT);}
 void transmit(){digitalWrite(10,HIGH);int x=0;
 while(x!=10){tone(8,a);delay(1000);tone(8,b);delay(1000);tone(8,c);delay(1000);tone(8,32766);x++;}
 x=0;
@@ -30,4 +30,4 @@ dah();dit();dit();dit();space();//          B
 dah();dit();dah();dah();//                  Y
 noTone(8);delay(1000);
 digitalWrite(10,LOW);}
-void loop(){if(digitalRead(4)&&digitalRead(5)){transmit();}}
+void loop(){if(digitalRead(4)&&digitalRead(5)&&!digitalRead(6)&&!digitalRead(7)&&!digitalRead(9)){transmit();}}
