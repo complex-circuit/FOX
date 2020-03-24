@@ -4,7 +4,7 @@ A hidden transmitter is known as the fox. This is the fox that I am working on.
 
 The outer case a waterproof ammocase.
 
-Responds to DTMF 1.
+Responds to DTMF 1.(Or 6, if you want to know how many times it has been activated.)
 
 Central Computer: Arduino Nano
 
