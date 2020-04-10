@@ -81,4 +81,23 @@ tone(8,a);delay(1000);tone(8,b);delay(1000);tone(8,c);delay(1000);tone(8,32766);
 void loop(){
   if(digitalRead(4)&&digitalRead(5)&&!digitalRead(6)&&!digitalRead(7)&&!digitalRead(9)){transmit();}
   if(digitalRead(4)&&!digitalRead(5)&&digitalRead(6)&&digitalRead(7)&&!digitalRead(9)){sendcount();}
+   if(digitalRead(4)&&digitalRead(5)&&!digitalRead(6)&&digitalRead(7)&&!digitalRead(9)) {
+    dit(); t=1;digitalWrite(10,HIGH);delay(2000);
+  dit();dit();dah();dit();space();//    f
+  dah();dah();dah();space();//          o
+  dah();dit();dit();dah();space();//    x
+  space();space();
+  dah();space();dit();space();//        te
+  dit();dit();dit();space();//           s
+  dah();space();space();space();//        t
+  
+dah();dit();dah();space();//                K
+dah();dit();dah();dit();space();//          C
+dit();dit();dit();dah();dah();space();//    3
+dit();dah();dah();dah();space();//          J
+dah();dit();dit();dit();space();//          B
+dah();dit();dah();dah();//                  Y
+
+noTone(8);delay(1000);digitalWrite(10,LOW);
+    }
 }
